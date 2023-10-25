@@ -91,3 +91,19 @@ As a **misuser**, I want to **post fake future events**, by **entering false inf
 **Request to speak page:**
 
 ![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/a10be259-2357-43ac-b8c5-2a5cd0c7a408)
+
+
+## C4 Diagrams 
+
+**Level 1**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/d41b0589-c4f1-418b-aa25-4529d90fa8ad)
+
+
+**Level 2**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/9900aa54-c700-42df-9d83-6e0b76c16c75)
+
+**Level 3**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/dcd57b7b-9ee1-4d1d-9b34-716f3a14c42a)
