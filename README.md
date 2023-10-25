@@ -14,9 +14,6 @@ TBD
 
 ## User Stories
 
-As a **user/role**, I want to **goal** so I can **rationale**.
-
-
 As a **public viewer**, I want to **view the About page**, so I can **learn more about the organization**
 - Acceptance Criteria:
   - Contain the non-profit’s general description and mission statement
@@ -49,3 +46,48 @@ As a **public viewer**, I want to **view upcoming events**, so I can **RSVP if i
   - Contain a form to RSVP yourself
     - Name
     - Email Address
+
+## MisUser Stories
+
+As a **misuser**, I want to **spam the RSVP** by **entering fake information**
+- Mitigation criteria:
+  - Only allow 1 RSVP per email address, or limit 1 RSVP by IP address per day
+  
+As a **misuser**, I want to **signup unwanting individuals** by **entering their contact info to receive notifications**
+- Mitigation criteria:
+  - Require the user to click accept on a one-time confirmation email
+  - Only allow 1 signup per IP address per day
+		
+As a **misuser**, I want to **post fake future events**, by **entering false information to event creation features**
+- Mitigation criteria:
+  - Require administrators to log in to modify events, don’t allow the public to modify events.
+
+
+
+
+
+## Site Mock Up \ Examples
+
+**About Page:**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/3cf3ddd8-47d8-42e5-8bfe-19abe437bdb5)
+
+
+
+
+**Event Page:**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/514e59f1-1510-47ba-a9a3-86a42b35de84)
+
+
+
+
+**Join Today Page:**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/762ca8af-fe48-4998-a8c7-e2c037013478)
+
+
+
+**Request to speak page:**
+
+![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/a10be259-2357-43ac-b8c5-2a5cd0c7a408)
