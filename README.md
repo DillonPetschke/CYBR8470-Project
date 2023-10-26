@@ -5,12 +5,18 @@ This app will be a basic website concept for the non-profit organization called 
 
 ## Installation
 - Open PowerShell 
-- Cd to the folder of your choice (that contains required docker files)
-- Docker build . 
-
+- Cd to the folder of your choice (that contains required files)
+- Docker build -t project .
+- Docker run -it -p 8000:8000 project
 
 ## Getting Started 
-TBD
+- Install via Installation above
+- Check out the following pages
+  - 127.0.0.1:8000/homepage
+  - 127.0.0.1:8000/joinnow
+  - 127.0.0.1:8000/about
+  - 127.0.0.1:8000/requesttospeak
+
 
 
 ## User Stories
