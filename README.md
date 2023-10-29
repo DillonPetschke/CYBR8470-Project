@@ -53,6 +53,7 @@ As a **public viewer**, I want to **view upcoming events**, so I can **RSVP if i
   - Contain a form to RSVP yourself
     - Name
     - Email Address
+      
 
 ## MisUser Stories
 
@@ -68,9 +69,6 @@ As a **misuser**, I want to **signup unwanting individuals** by **entering their
 As a **misuser**, I want to **post fake future events**, by **entering false information to event creation features**
 - Mitigation criteria:
   - Require administrators to log in to modify events, don’t allow the public to modify events.
-
-
-
 
 
 ## Site Mock Up \ Examples
