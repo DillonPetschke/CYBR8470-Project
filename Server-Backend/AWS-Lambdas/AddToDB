@@ -1,0 +1,28 @@
+# This file is a copy of the current AWS lambda script running in the backend of this site.  
+
+import json
+import boto3
+import time
+import re 
+
+
+dynamodb = boto3.client('dynamodb')
+
+# Create a function to read data from the API call, Check if it's valid, and Post to Dynamo DB if so. 
+def lambda_handler(event, context):
+        email = event['email']
+        Firstname = event['Firstname']
+        Lastname = event['Lastname']
+        Type = event['Type']
+
+
+        # Concept of email checking borrowed from: https://www.geeksforgeeks.org/check-if-email-address-valid-or-not-in-python/
+        # Below is a Regular Expression used to validate input
+        pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+        
+        if re.match(pattern,email):
+                dynamodb.put_item(TableName='ITPO_Members', Item={'email':{'S':email}, 'Firstname':{'S':Firstname}, 'Lastname':{'S':Lastname}, 'Type':{'S':Type}})
+        else:
+                print("Invalid Email")
+    
+
