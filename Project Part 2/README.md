@@ -1,15 +1,24 @@
-# CYBR8470-Project 
+# CYBR8470-Project Part 2
+
+## Executive Summary
+This app will be a basic website concept for the non-profit organization called Information Technology Professionals Organization of Lincoln (ITPO - LNK). This organization holds monthly educational meetings where local programmers, cybersecurity experts, graphic designers, or local businesses can share their knowledge or projects they are working on. This site will hold information about the next upcoming meeting, an about page for the public to learn more about the group, a "request to speak" page for individuals to submit their idea of a monthly meeting, along with a member's only page showing an archive of past meetings.  
 
 ## Installation
-I have changed my original architecture which originally used a Django project inside of a docker container to a fully cloud-based architecture. No containers or VMs are now needed, all pages are hosted via s3 buckets that are public and accessible from anywhere. If you would like to duplicate this project, I will include details under Server-Backend of how services such as API-Gateway, Lambda, Cognito, and Dynamo DB have been set up. 
+I have changed my original architecture which originally used a Django project inside of a docker container to instead use a fully cloud-based architecture. No containers or VMs are now needed, all pages are hosted via s3 buckets that are public and accessible from anywhere. If you would like to duplicate this project, I will include details under Server-Backend of how services such as API-Gateway, Lambda, Cognito, and Dynamo DB have been set up. 
 
-Direct S3 webpage links:
-https://itpolnk-homepage.s3.us-east-2.amazonaws.com/HomePage.html
-https://itpolnk-about.s3.us-east-2.amazonaws.com/About.html
-https://itpolnk-requesttospeak.s3.us-east-2.amazonaws.com/RequestToSpeak.html
+## Direct S3 webpage links:
 
-AWS Cognito Login page:
-https://itpolnk.auth.us-east-2.amazoncognito.com/login?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-archive.s3.us-east-2.amazonaws.com%2Fmembersonly.html
+Home page:
+- https://itpolnk-homepage.s3.us-east-2.amazonaws.com/HomePage.html
+  
+About page:
+- https://itpolnk-about.s3.us-east-2.amazonaws.com/About.html
+
+Request To Speak page:
+- https://itpolnk-requesttospeak.s3.us-east-2.amazonaws.com/RequestToSpeak.html
+
+AWS Cognito Login page **(Join Now and Member's only archive pages are served via this login page)**
+- https://itpolnk.auth.us-east-2.amazoncognito.com/login?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-archive.s3.us-east-2.amazonaws.com%2Fmembersonly.html
 
 ## Architecture Diagrams
 ![image](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/815cba92-1b40-4b14-bdf6-6f436d51a29f)
