@@ -1,4 +1,4 @@
-Below is the original readme from part 1 of the semester project. Part 2 readme can be found under project folder or click here: https://github.com/DillonPetschke/CYBR8470-Project/blob/90b144b2dcbf9a3c59f9e664d0bdf273a611bc26/Project2/README.md
+Below is the original readme from part 1 of the semester project. Part 2 readme can be found under project2 folder or click here: https://github.com/DillonPetschke/CYBR8470-Project/blob/90b144b2dcbf9a3c59f9e664d0bdf273a611bc26/Project2/README.md
 
 # CYBR8470-Project
 
