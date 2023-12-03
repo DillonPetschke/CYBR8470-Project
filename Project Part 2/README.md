@@ -1,17 +1,14 @@
-# CYBR8470-Project
-
-## Executive Summary
-This app will be a basic website concept for the non-profit organization called Information Technology Professionals Organization of Lincoln (ITPO - LNK) This site will announce upcoming events, allow RSVPing to events, and tell visitors more about the non-profit. 
+# CYBR8470-Project 
 
 ## Installation
-No containers or VMs needed, all pages are hosted via s3 buckets that are public and accessible from anywhere. 
+I have changed my original architecture which originally used a Django project inside of a docker container to a fully cloud-based architecture. No containers or VMs are now needed, all pages are hosted via s3 buckets that are public and accessible from anywhere. If you would like to duplicate this project, I will include details under Server-Backend of how services such as API-Gateway, Lambda, Cognito, and Dynamo DB have been set up. 
 
 Direct S3 webpage links:
 https://itpolnk-homepage.s3.us-east-2.amazonaws.com/HomePage.html
 https://itpolnk-about.s3.us-east-2.amazonaws.com/About.html
 https://itpolnk-requesttospeak.s3.us-east-2.amazonaws.com/RequestToSpeak.html
 
-Fix the link later:
+AWS Cognito Login page:
 https://itpolnk.auth.us-east-2.amazoncognito.com/login?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-archive.s3.us-east-2.amazonaws.com%2Fmembersonly.html
 
 ## Architecture Diagrams
