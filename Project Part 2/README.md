@@ -66,3 +66,7 @@ To prevent invalid email addresses from being used during signup, a verification
 
 Multi-factor is required for users to login to prevent unauthorized access. 
 
+RSVP Form validates emails via Regular Expression matching. 
+- pattern = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+
+Lambda functions are throttled to 60 requests per minute to prevent mass spamming of databases. 
