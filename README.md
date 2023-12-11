@@ -61,17 +61,13 @@ As a **public viewer**, I want to **view upcoming events**, so I can **RSVP if i
 
 As a **misuser**, I want to **spam the RSVP** by **entering fake information**
 - Mitigation criteria:
-  - Only allow 1 RSVP per email address, or limit 1 RSVP by IP address per day
+  - verify email addresses are valid before entering them into DB
+
   
 As a **misuser**, I want to **signup unwanting individuals** by **entering their contact info to receive notifications**
 - Mitigation criteria:
   - Require the user to click accept on a one-time confirmation email
-  - Only allow 1 signup per IP address per day
 		
-As a **misuser**, I want to **post fake future events**, by **entering false information to event creation features**
-- Mitigation criteria:
-  - Require administrators to log in to modify events, don’t allow the public to modify events.
-
 
 ## Site Mock Up \ Examples
 
