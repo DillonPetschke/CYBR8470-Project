@@ -35,3 +35,12 @@ Clicking sign up generates the following screen and sends an email via AWS SNS w
 MFA Email example:
 
 ![MFA](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/32d8eb13-bf08-4b75-99d6-b59255dd45a5)
+
+Next, the user will need to setup MFA 
+
+![MFASetup](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/4c240272-4769-4ee1-b6f5-1617887af29a)
+
+After the account is generated, the user is redirected to the restricted, member's only archive page. 
+
+![memberonly](https://github.com/DillonPetschke/CYBR8470-Project/assets/51690971/6981d348-507a-42d7-9d41-190579c81bcd)
+
