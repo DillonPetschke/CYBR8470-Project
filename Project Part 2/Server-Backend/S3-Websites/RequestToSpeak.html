@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+
+<title>Request To Speak &#8211; ITPO LNK</title>
+
+<link rel='stylesheet' id='hever-fonts-css' href='https://fonts-api.wp.com/css?family=PT+Sans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext&#038;display=swap' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-12-1' href='https://s0.wp.com/wp-content/themes/pub/hever/style.css?m=1691491246i&cssminify=yes' type='text/css' media='all' />
+<body class="page-template-default page page-id-1014 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title">
+
+<head>
+<script>
+function submitToAPI(e) {
+       e.preventDefault();
+       var URL = "https://jv5wlc0uo5.execute-api.us-east-2.amazonaws.com/prod/RequestToSpeak";
+
+
+       var name = document.getElementById("name-input").value;
+	   var month = document.getElementById("month-input").value;
+       var email = document.getElementById("email-input").value;
+	   var topic = document.getElementById("topic-input").value;
+
+		var data ={
+		"email": email,
+		"month": month,
+		"name": name,
+		"topic": topic
+		};
+
+
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("POST", "https://jv5wlc0uo5.execute-api.us-east-2.amazonaws.com/prod/RequestToSpeak");
+	
+		xmlhttp.send(JSON.stringify(data));
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState === 4) {
+			var response = JSON.parse(xmlhttp.responseText);
+			if (xmlhttp.status === 200 ) {
+				console.log('successful');
+				document.getElementById("RequestToSpeak-form").innerHTML = "<h1>Thank you for requesting! We will email you soon!</h1>";
+		    } else {
+			    console.log('failed');
+			}
+		}
+	}
+	
+	document.getElementById('RequestToSpeak-form').reset();
+	  
+	}
+</script>
+</head>
+
+<header id="masthead" class="site-header responsive-max-width has-title-and-tagline has-menu" role="banner">
+<p class="site-title"><a href="/homepage" rel="home">ITPO LNK</a></p>	
+<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+<div class="menu-primary-container">
+<ul id="menu-primary-1" class="main-menu" aria-label="submenu"><li class="menu-item"><a href="https://itpolnk-homepage.s3.us-east-2.amazonaws.com/HomePage.html">Home</a></li>
+	<li class="menu-item"><a href="https://itpolnk-about.s3.us-east-2.amazonaws.com/About.html">About</a></li>
+	<li class="menu-item"><a href="https://itpolnk.auth.us-east-2.amazoncognito.com/signup?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-homepage.s3.us-east-2.amazonaws.com%2FHomePage.html">Join Today</a></li>
+	<li class="menu-item"><a href="https://itpolnk-requesttospeak.s3.us-east-2.amazonaws.com/RequestToSpeak.html">Request to Speak</a></li>
+	<li class="menu-item"><a href="https://itpolnk.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-homepage.s3.us-east-2.amazonaws.com%2FHomePage.html">Meeting Archive (Members Only)</a></li>
+</ul>
+</div>
+</nav><!-- #site-navigation -->
+		
+</header><!-- #header -->
+
+
+
+
+<section id="primary" class="content-area">
+<article id="post-1014" class="post-1014 page type-page status-publish has-post-thumbnail hentry entry">
+
+
+
+<header class="entry-header responsive-max-width">
+<h1 class="entry-title">Request To Speak</h1>
+</header>
+
+	
+<div class="entry-content">	
+<div class="wp-block-group has-background-background-color has-background is-layout-constrained wp-block-group-is-layout-constrained" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><div class="wp-block-group__inner-container">
+<figure class="wp-block-image size-large"><img src="https://aitplincolncom.files.wordpress.com/2022/12/itpolnk-blog-banner.png?w=750" alt="" class="wp-image-1006" /></figure>
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+
+
+
+
+<p>ITPO is always looking for great speakers to present topics of their choice. If you would like to speak, please fill out the form below to submit your information to the board of directors for consideration. Please note, we wish to host meetings on the 3rd Wednesday of every month. </p>
+
+
+<form id="RequestToSpeak-form" method="post">
+      <p>Name (Required)</p>
+      <input type="text" style="height:35px;" id="name-input" placeholder="Enter full name here" class="form-control" style="width:100%;" /><br/>
+	  <br>
+	  <p>Which month would you like to speak? </p>
+	  <p>(Use "any" if you have no preference)</p>
+      <input type="text" style="height:35px;" id="month-input" placeholder="Enter month here" class="form-control" style="width:100%;" /><br/>
+	  <br>
+      <p>Email (Required)</p>
+      <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here..." class="form-control" style="width:100%;"/><br/>
+	  <br>
+	  <p>Topic: </p>
+      <input type="text" style="height:35px;" id="topic-input" placeholder="Enter topic here..." class="form-control" style="width:100%;"/><br/>
+	  <br>
+     
+      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+</form>
+
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+</body>
+</html>

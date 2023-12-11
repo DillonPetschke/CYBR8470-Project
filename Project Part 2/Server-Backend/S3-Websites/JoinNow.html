@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<title>Join Today &#8211; ITPO LNK</title>
+
+<link rel='stylesheet' id='hever-fonts-css' href='https://fonts-api.wp.com/css?family=PT+Sans%3A400%2C400i%2C700%2C700i&#038;subset=latin%2Clatin-ext&#038;display=swap' media='all' />
+<link crossorigin='anonymous' rel='stylesheet' id='all-css-12-1' href='https://s0.wp.com/wp-content/themes/pub/hever/style.css?m=1691491246i&cssminify=yes' type='text/css' media='all' />
+<body class="page-template-default page page-id-1014 wp-embed-responsive customizer-styles-applied singular image-filters-enabled hide-homepage-title">
+<head>
+<script>
+function submitToAPI(e) {
+       e.preventDefault();
+       var URL = "https://jv5wlc0uo5.execute-api.us-east-2.amazonaws.com/prod/ITPO_LNK";
+
+
+       var firstname = document.getElementById("firstname-input").value;
+	   var lastname = document.getElementById("lastname-input").value;
+       var email = document.getElementById("email-input").value;
+	   var type = document.getElementById("type-input").value;
+
+		var data ={
+		"email": email,
+		"Firstname": firstname,
+		"Lastname": lastname,
+		"Type": type
+		};
+
+
+
+		var xmlhttp = new XMLHttpRequest();
+		xmlhttp.open("POST", "https://jv5wlc0uo5.execute-api.us-east-2.amazonaws.com/prod/ITPO_LNK");
+	
+		xmlhttp.send(JSON.stringify(data));
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState === 4) {
+			var response = JSON.parse(xmlhttp.responseText);
+			if (xmlhttp.status === 200 ) {
+				console.log('successful');
+				document.getElementById("join-form").innerHTML = "<h1>Thank you for joining! We will email you soon!</h1>";
+		    } else {
+			    console.log('failed');
+			}
+		}
+	}
+	
+	document.getElementById('join-form').reset();
+	  
+	}
+</script>
+</head>
+<header id="masthead" class="site-header responsive-max-width has-title-and-tagline has-menu" role="banner">
+<p class="site-title"><a href="/homepage" rel="home">ITPO LNK</a></p>	
+<nav id="site-navigation" class="main-navigation" aria-label="Main Navigation">
+<div class="menu-primary-container">
+<ul id="menu-primary-1" class="main-menu" aria-label="submenu"><li class="menu-item"><a href="https://itpolnk-homepage.s3.us-east-2.amazonaws.com/HomePage.html">Home</a></li>
+	<li class="menu-item"><a href="https://itpolnk-about.s3.us-east-2.amazonaws.com/About.html">About</a></li>
+	<li class="menu-item"><a href="https://itpolnk.auth.us-east-2.amazoncognito.com/signup?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-homepage.s3.us-east-2.amazonaws.com%2FHomePage.html">Join Today</a></li>
+	<li class="menu-item"><a href="https://itpolnk-requesttospeak.s3.us-east-2.amazonaws.com/RequestToSpeak.html">Request to Speak</a></li>
+	<li class="menu-item"><a href="https://itpolnk.auth.us-east-2.amazoncognito.com/oauth2/authorize?client_id=1lirdggul7glfd5toje0qpml8a&response_type=code&scope=email+openid+phone&redirect_uri=https%3A%2F%2Fitpolnk-homepage.s3.us-east-2.amazonaws.com%2FHomePage.html">Meeting Archive (Members Only)</a></li>
+</ul>
+</div>
+</nav><!-- #site-navigation -->
+		
+</header><!-- #header -->
+
+
+
+
+<section id="primary" class="content-area">
+<article id="post-1014" class="post-1014 page type-page status-publish has-post-thumbnail hentry entry">
+
+
+
+<header class="entry-header responsive-max-width">
+<h1 class="entry-title">Join Today</h1>
+</header>
+
+	
+<div class="entry-content">	
+<div class="wp-block-group has-background-background-color has-background is-layout-constrained wp-block-group-is-layout-constrained" style="border-style:none;border-width:0px;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><div class="wp-block-group__inner-container">
+<figure class="wp-block-image size-large"><img src="https://aitplincolncom.files.wordpress.com/2022/12/itpolnk-blog-banner.png?w=750" alt="" class="wp-image-1006" /></figure>
+<div class="wp-block-jetpack-layout-grid alignfull column1-desktop-grid__span-12 column1-desktop-grid__row-1 column1-tablet-grid__span-8 column1-tablet-grid__row-1 column1-mobile-grid__span-4 column1-mobile-grid__row-1">
+<div class="wp-block-jetpack-layout-grid-column wp-block-jetpack-layout-grid__padding-none">
+<h2 class="wp-block-heading has-large-font-size">Information Technology Professionals Organization &#8211; Lincoln</h2>
+
+
+
+<p>Joining is temporarily free, please insert your information below to begin receiving event details directly to your mailbox. </p>
+
+<form id="join-form" method="post">
+      <p>First name (Required)</p>
+      <input type="text" style="height:35px;" id="firstname-input" placeholder="Enter name here" class="form-control" style="width:100%;" /><br/>
+	  <br>
+	  <p>Last name (Required)</p>
+      <input type="text" style="height:35px;" id="lastname-input" placeholder="Enter name here" class="form-control" style="width:100%;" /><br/>
+	  <br>
+      <p>Email (Required)</p>
+      <input type="email" style="height:35px;" id="email-input" placeholder="Enter email here..." class="form-control" style="width:100%;"/><br/>
+	  <br>
+	  <p>Type of membership (Student or Professional):</p>
+      <input type="text" style="height:35px;" id="type-input" placeholder="Student \ Professional" class="form-control" style="width:100%;"/><br/>
+	  <br>
+     
+      <div class="g-recaptcha" data-sitekey="6Lc7cVMUAAAAAM1yxf64wrmO8gvi8A1oQ_ead1ys" class="form-control" style="width:100%;"></div>
+      <button type="button" onClick="submitToAPI(event)" class="btn btn-lg" style="margin-top:20px;">Submit</button>
+</form>
+
+
+
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+</body>
+</html>
